@@ -18,6 +18,19 @@ This challenge involves preparing a Machine Learning model for deployment, ensur
 - Highlight assumptions or questions for the team in the documentation.
 - Consider the model's binary classification use case with imputation requirements.
 
+## Solution Proposed
+**Workflow**
+Composed of:
+- Training Pipeline (generate imputation and model dependencies)
+- Inference Pipeline (real-time prediction through an API request)
+- Streamlit (Interface to request an inference)
+
+The requirement '*The solution should work for any cloud provider*' is satisfied by the Docker implementation (cloud provider agnostic).
+
+**Next Steps**
+- Batch Inference Pipeline (the workflow is only prepared for one prediction at time)
+- ML Improvements (Feature Engineering, MICE Imputation, Model Evaluation)
+
 ## ML Improvements
 1. **Data Validation:** Added validation checks for input data to ensure robustness.
 2. **Improved Imputation:** 
@@ -27,14 +40,6 @@ This challenge involves preparing a Machine Learning model for deployment, ensur
    - Switched from `LogisticRegression` to `RandomForestClassifier`. Avoided the dependency on StandardScaler required by LogisticRegression.
 4. **Model Evaluation:** Implemented 5-Fold Stratified Cross-Validation (without data leakage) to ensure robust metrics during training, replacing a simple hold-out approach.
 5. **Complete Training:** Finalized the training process after thorough model validation.
-
-## Solution Workflow
-The solution is composed of:
-- Training Pipeline (generate imputation and model dependencies)
-- Inference Pipeline (real-time prediction through an API request)
-- Streamlit (Interface to request an inference)
-
-The requirement 'The solution should work for any cloud provider' is satisfied by the Docker implementation.
 
 ## Install Dependencies
 1. Navigate to the repository folder:
