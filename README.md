@@ -20,7 +20,6 @@ This challenge involves preparing a Machine Learning model for deployment, ensur
 
 ## Solution Proposed
 **Workflow**
-Composed of:
 - Training Pipeline (generate imputation and model dependencies)
 - Inference Pipeline (real-time prediction through an API request)
 - Streamlit (Interface to request an inference)
